@@ -58,6 +58,8 @@ class ReadmeReader(object):
         """
         Gets whether the specified subpath is a supported binary file.
         """
+        if subpath and subpath.endswith('.pdf'):    
+            return True                             
         return False
 
     def last_updated(self, subpath=None):
